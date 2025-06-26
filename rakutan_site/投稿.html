@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>口コミ投稿ページ - 筑波大学 楽単＆地雷授業まとめ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>筑波大学 楽単＆地雷授業まとめ</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">トップ</a></li>
+        <li><a href="授業一覧.html">授業一覧</a></li>
+        <li><a href="投稿.html">投稿する</a></li>
+        <li><a href="#" onclick="logout()">ログアウト</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="intro">
+    <h2>口コミ投稿ページ</h2>
+    <p>あなたの経験を共有してください。</p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 筑波大学 楽単＆地雷授業まとめ</p>
+  </div>
+</footer>
+
+<script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "index.html";
+  }
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
